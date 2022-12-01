@@ -3,14 +3,7 @@ namespace src\controllers;
 
 use \core\Controller;
 
-class HomeController extends Controller {
-
-    private $loggedUser;
-
-    public function __construct()
-    {
-        $this->redirect('/login');
-    }
+class LoginController extends Controller {
 
     public function index() {
         $this->render('home', ['nome' => 'Bonieky']);
@@ -23,5 +16,14 @@ class HomeController extends Controller {
     public function sobreP($args) {
         print_r($args);
     }
+
+    public function signin(){
+        echo 'login';
+    }
+
+    public function signup(){
+        echo 'cadastro';
+    }
+
 
 }

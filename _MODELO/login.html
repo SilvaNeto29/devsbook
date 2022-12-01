@@ -5,6 +5,7 @@
     <title></title>
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
     <link rel="stylesheet" href="assets/css/login.css" />
+    <script type="text/javascript" src="/_MODELO/assets/js/script.js"></script>
 </head>
 <body>
     <header>
@@ -14,11 +15,11 @@
     </header>
     <section class="container main">
         <form method="POST">
-            <input placeholder="Digite seu e-mail" class="input" type="email" name="email" />
+            <input id="email" placeholder="Digite seu e-mail" class="input" type="email" name="email" />
 
-            <input placeholder="Digite sua senha" class="input" type="password" name="password" />
+            <input id="senha" placeholder="Digite sua senha" class="input" type="password" name="password" />
 
-            <input class="button" type="submit" value="Acessar o sistema" />
+            <input class="button" type="submit" value="Acessar o sistema" onclick="validaCamposLogin()"/>
 
             <a href="">Ainda não tem conta? Cadastre-se</a>
         </form>

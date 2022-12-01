@@ -7,6 +7,13 @@ function setActiveTab(tab) {
         }
     });
 }
+
+function validaCamposLogin(){
+    if(document.getElementById("email") === '' || document.getElementById("senha") === ''){
+        alert("Preencha corretamente os campos")
+    }    
+}
+
 function showTab() {
     if(document.querySelector('.tab-item.active')) {
         let activeTab = document.querySelector('.tab-item.active').getAttribute('data-for');

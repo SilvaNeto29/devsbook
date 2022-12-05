@@ -18,7 +18,11 @@ class LoginController extends Controller {
     }
 
     public function signin(){
-        echo 'login';
+        $this->render('login');
+    }
+
+    public function signinAction(){
+        echo 'login - recebido';
     }
 
     public function signup(){

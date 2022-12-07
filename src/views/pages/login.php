@@ -15,6 +15,12 @@
     </header>
     <section class="container main">
         <form method="POST" action="<?=$base;?>/login">
+
+            <?php if(!empty($flash)): ?>
+                <?php var_dump($flash); ?>
+                <?php echo $flash; ?>
+            <?php endif;?>    
+
             <input id="email" placeholder="Digite seu e-mail" class="input" type="email" name="email" />
 
             <input id="senha" placeholder="Digite sua senha" class="input" type="password" name="password" />

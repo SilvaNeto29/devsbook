@@ -5,6 +5,7 @@
 -- Criacao tabela usuarios
 CREATE TABLE `users` (
 `id`  int NOT NULL AUTO_INCREMENT,
+`name`  varchar(100) NULL ,
 `email`  varchar(100) NULL ,
 `password`  varchar(200) NULL ,
 `birthdate`  datetime NULL ,
@@ -12,7 +13,7 @@ CREATE TABLE `users` (
 `work`  varchar(100) NULL ,
 `cover`  varchar(100) NULL ,
 `avatar`  varchar(100) NULL ,
-`toker`  varchar(200) NULL ,
+`token`  varchar(200) NULL ,
 PRIMARY KEY (`id`)
 )
 ;

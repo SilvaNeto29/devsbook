@@ -68,20 +68,18 @@ class LoginController extends Controller {
         $name = filter_input(INPUT_POST, 'name');
 
         if($email && $password && $name && $birthdate){
-           
-            $birthdate = explode('/', $birthdate);
-            if(count($birthdate) !== 3){
+   
+            if(count(explode('-', $birthdate)) != 3){
                 $_SESSION['flash'] = 'Data de nascimento inválida!';
                 $this->redirect('/cadastro');
             }
-            
-            $birthdate = $birthdate[2].'-'.$birthdate[1].'-'.$birthdate[0];
+
             if(strtotime($birthdate) === false){
                 $_SESSION['flash'] = 'Data de nascimento inválida!';
                 $this->redirect('/cadastro');
             }
 
-            if(LoginHandler::emailExists($email === false)){
+            if(LoginHandler::emailExists($email) === false){
                 $token = LoginHandler::addUser($email,$password,$name,$birthdate);
                 $_SESSION['token'] = $token;
                 $this->redirect('/');

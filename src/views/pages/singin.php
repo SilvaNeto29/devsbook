@@ -17,8 +17,7 @@
         <form method="POST" action="<?=$base;?>/login">
 
             <?php if(!empty($flash)): ?>
-                <?php var_dump($flash); ?>
-                <?php echo $flash; ?>
+                <div class="flash" id="flash"><?php echo $flash;?></div>
             <?php endif;?>    
 
             <input id="email" placeholder="Digite seu e-mail" class="input" type="email" name="email" />

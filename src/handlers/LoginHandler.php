@@ -35,4 +35,24 @@ class LoginHandler {
             }
         }
     }
+
+    public static function addUser($email,$password,$name,$birthdate){
+        $hash = password_hash($password,PASSWORD_DEFAULT);
+        $token = md5(time().rand(0,9999).time());
+
+        User::insert(['email' => $email,
+                      'password' => $hash,
+                      'name' => $name,
+                      'birthdate' => $birthdate,
+                      'avatar' => 'default.jpg',
+                      'cover' => 'cover.jpg',
+                      'token' => $token])->execute();
+
+        return $token;
+    }
+
+    public static function emailExists($email){
+        $user = User::select()->where('email', $email)->one();
+        return $user ? true : false;
+    }
 }

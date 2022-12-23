@@ -14,3 +14,5 @@ Contudo, o projeto do curso foca em PHP puro, realizando validações e alterand
 Db -> Mysql
 <br>
 PHP Version -> 8.1
+<br>
+Composer Version -> 2.5.1 (ter instalado e rodar "composer install" pelo terminal na pasta do projeto)

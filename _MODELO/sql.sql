@@ -36,6 +36,7 @@ CREATE TABLE `posts` (
 `id`  int NOT NULL AUTO_INCREMENT ,
 `type`  varchar(255) NULL ,
 `created_at`  datetime NULL ,
+`id_user` int NULL,
 `body`  text NULL ,
 PRIMARY KEY (`id`)
 )

@@ -17,3 +17,5 @@ $router->post('/cadastro', 'LoginController@signupAction');
 // $router->get('/amigos');
 // $router->get('/fotos');
 // $router->get('/config');
+
+$router->post('/post/new', 'PostController@new');

@@ -5,9 +5,11 @@
             <div class="row">
                 <div class="column pr-5">
 
-                 <?= $render('feed_editor',['user' => $loggedUser]);?>   
+                <?= $render('feed_editor',['user' => $loggedUser]);?>   
 
-                <?= $render('feed_item');?>
+                <?php foreach($feed as $feedItem): ?>
+                    <?= $render('feed_item', ['user'=> $loggedUser, 'data' => $feedItem]);?>
+                <?php endforeach; ?>
 
                 </div>
                 <div class="column side pl-5">
@@ -25,7 +27,7 @@
                     </div>
                     <div class="box">
                         <div class="box-body m-10">
-                            Criado com â¤ï¸ por B7Web
+                            Criado com amor, por B7Web
                         </div>
                     </div>
                 </div>
